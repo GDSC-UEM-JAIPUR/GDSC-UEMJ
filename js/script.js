@@ -76,8 +76,6 @@ function setActive(navLinks, sectionId) {
   navLinks.forEach(link => {
     if (link.getAttribute('href') === `#${sectionId}`) {
       link.classList.add('nav-active');
-    }else if (link.getAttribute('href') === `${sectionId}`){
-      link.classList.add('nav-active');
     }
     else {
       link.classList.remove('nav-active');
