@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
     transition: opacity 0.75s, visibility 0.75s;
     z-index: 20000;
 }
@@ -21,6 +21,7 @@
     opacity: 0;
     visibility: hidden;
 }
+
 
 .loader::after {
     content: "";
@@ -172,21 +173,24 @@ a:hover {
     padding-top: 10px;
 }
 
-.top-bar ul li:nth-child(1):hover a{
+.top-bar ul li:nth-child(1):hover a {
     color: #5579c8;
-} 
-.top-bar ul li:nth-child(2):hover a{
+}
+
+.top-bar ul li:nth-child(2):hover a {
     color: #00acee;
-} 
-.top-bar ul li:nth-child(3):hover a{
-    color:  #0077B5 ;
-} 
-.top-bar ul li:nth-child(4):hover a{
+}
+
+.top-bar ul li:nth-child(3):hover a {
+    color: #0077B5;
+}
+
+.top-bar ul li:nth-child(4):hover a {
     /* color: #f42f92; */
     background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} 
+}
 
 .top-bar li {
     font-size: 1.5rem;
@@ -561,6 +565,7 @@ forth-letter {
     font-size: 1rem;
     font-weight: 500;
 }
+
 #opportunities.show {
     opacity: 1;
     transform: translateY(0);
@@ -1007,6 +1012,7 @@ div.col-body:hover {
     box-shadow: 0 0 0 50px inset #0056b3;
     scale: 1.06;
 }
+
 /* ********** Faq Button End ********** */
 
 
@@ -1181,8 +1187,9 @@ footer {
         overflow: hidden;
     }
 }
-@media (max-width: 895px) and (min-width:827px){
-    .banner-tag span{
+
+@media (max-width: 895px) and (min-width:827px) {
+    .banner-tag span {
         display: none;
     }
 }
@@ -1240,6 +1247,7 @@ form .envelop-icon {
     padding-right: 10px;
     border-bottom: 1px solid #ccc;
 }
+
 form .envelop-icon-home {
     font-size: 20px;
     padding-right: 10px;
@@ -1247,7 +1255,7 @@ form .envelop-icon-home {
     margin-top: 1px;
 }
 
-form .footer-mail-icon{
+form .footer-mail-icon {
     margin-bottom: 1.8px;
 }
 
