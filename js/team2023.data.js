@@ -252,7 +252,7 @@ let exCoreMemberDetails2023 = [
   {
     id: 4,
     name: "Surajit Mondal",
-    avatar: "../assets/img/team/Surajit.png",
+    avatar: "../assets/img/team/surajit.png",
     badges: `
         <span class="blue">Outreach Team</span>
         <span class="green">Event Team</span>

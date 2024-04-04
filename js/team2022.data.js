@@ -8,7 +8,7 @@ let leadMemberDetails2022 = [
     {
         id: 0,
         name: "Sahitya Roy",
-        avatar: "../assets/img/team/sahitya.jpeg",
+        avatar: "../assets/img/team/Sahitya.jpeg",
         badges: `
                       <span class="red">2022</span>
                       <span class="blue">GDSC</span>
