@@ -11,7 +11,7 @@ body {
     padding: 2rem;
     width: 100%;
     height: 100vh;
-    background: var(--lightwhite) url(../images/landing1.jpeg) fixed no-repeat 50% 50% / cover;
+    /* background: var(--lightwhite) url(../images/landing1.jpeg) fixed no-repeat 50% 50% / cover; */
     display: flex;
     justify-content: center;
     align-items: center;
