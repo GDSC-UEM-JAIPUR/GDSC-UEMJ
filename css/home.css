@@ -118,7 +118,7 @@ a:hover {
 /* ********************* Navbar/Top Bar CSS ********************* */
 .navbar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     transition: all 0.8s ease;
     font-weight: 600;
     opacity: 1;
@@ -139,7 +139,7 @@ a:hover {
 
 
 .top-bar {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     justify-content: space-between;
