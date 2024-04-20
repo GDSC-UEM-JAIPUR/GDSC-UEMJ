@@ -256,8 +256,8 @@
 
 .col-4 {
     background-image: url(../images/event-data.png);
-    box-shadow: 0 0 0 3px inset yellow;
-    border-bottom: 8px solid yellow;
+    box-shadow: 0 0 0 3px inset orange;
+    border-bottom: 8px solid orange;
     background-size: cover;
 }
 
@@ -316,7 +316,7 @@
 }
 
 .event-underline-yellow {
-    background: yellow;
+    background: orange;
 }
 
 .event-underline-red {
@@ -342,7 +342,7 @@
 }
 
 .back-yellow {
-    border: 3px solid yellow;
+    border: 3px solid orange;
 }
 
 .back-red {
@@ -376,7 +376,7 @@
 }
 
 .back-title-yellow {
-    color: yellow;
+    color: orange;
 }
 
 .event-details {
@@ -464,12 +464,12 @@
 }
 
 .hover-yellow:hover {
-    box-shadow: 0 0 0 22px inset yellow;
+    box-shadow: 0 0 0 22px inset orange;
     color: #000000;
 }
 
 .yellow {
-    box-shadow: 0 0 0 2px inset yellow;
+    box-shadow: 0 0 0 2px inset orange;
 }
 
 .event-links {
