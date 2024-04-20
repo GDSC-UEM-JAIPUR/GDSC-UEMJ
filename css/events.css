@@ -282,6 +282,20 @@
     border-bottom: 8px solid green;
 
 }
+.col-8 {
+    background-image: url(../images/dsabootcamp.jpg);
+    box-shadow: 0 0 0 3px inset blue;
+    border-bottom: 8px solid blue;
+    background-size: contain;
+
+}
+.col-9 {
+    background-image: url(../images/event2.png);
+    box-shadow: 0 0 0 3px inset red;
+    border-bottom: 8px solid red;
+    background-size: contain;
+
+}
 
 .event-underline {
     width: 73%;
