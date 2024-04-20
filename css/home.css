@@ -814,6 +814,7 @@ div.col-body:hover {
     align-items: center;
     flex-wrap: wrap;
     padding: 40px;
+    height: fit-content;
 
 }
 
