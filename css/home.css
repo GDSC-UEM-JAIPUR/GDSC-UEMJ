@@ -1353,6 +1353,11 @@ footer hr {
     margin: 0;
     padding: 5px;
 }
+.dev_link{
+    background: linear-gradient(90deg, #e288ff 0%, #a66dff 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .footer-underline {
     width: 100%;
