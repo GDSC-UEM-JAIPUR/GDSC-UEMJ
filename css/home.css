@@ -194,13 +194,14 @@ a:hover {
 
 .top-bar li {
     font-size: 1.5rem;
-    border-left: 1px solid #808080;
+    border-right: 1px solid #808080;
     padding: 0px 15px;
 
 }
 
 .top-bar li:last-child {
-    border-right: 1px solid #808080;
+    /* border-right: 1px solid #808080; */
+    border-right: none;
 }
 
 .top-bar a {
