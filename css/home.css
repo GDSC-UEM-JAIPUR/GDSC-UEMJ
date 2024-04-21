@@ -173,19 +173,19 @@ a:hover {
     padding-top: 10px;
 }
 
-.top-bar ul li:nth-child(1):hover a {
+/* .top-bar ul li:nth-child(1):hover a {
     color: #5579c8;
-}
+} */
 
-.top-bar ul li:nth-child(2):hover a {
+.top-bar ul li:nth-child(1):hover a {
     color: #00acee;
 }
 
-.top-bar ul li:nth-child(3):hover a {
+.top-bar ul li:nth-child(2):hover a {
     color: #0077B5;
 }
 
-.top-bar ul li:nth-child(4):hover a {
+.top-bar ul li:nth-child(3):hover a {
     /* color: #f42f92; */
     background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
     -webkit-background-clip: text;
