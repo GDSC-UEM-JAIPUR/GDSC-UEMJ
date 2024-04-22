@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  if (window.location.pathname === "/html/home.html") {
+  if (window.location.pathname.includes === "/html/home.html") {
     activateNavLinks();
   }
 });
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  if (window.location.pathname === "/html/home.html") {
+  if (window.location.pathname.includes === "/html/home.html") {
     activateNavLinks();
 
     var homeLink = document.querySelector('nav ul a[href="#main-section"]');
