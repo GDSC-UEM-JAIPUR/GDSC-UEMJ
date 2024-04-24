@@ -52,51 +52,37 @@ window.addEventListener('load', function () {
 
 // ******************** Navbar Active link ********************
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var currentUrl = window.location.href;
-
-  // Get all menu items
+  var isHome = currentUrl.includes("home.html");
+  var sections = document.querySelectorAll("section");
   var menuItems = document.querySelectorAll(".menu li a");
 
-  // Loop through each menu item
-  menuItems.forEach(function(item) {
-      // Check if the href attribute matches the current URL
-      if (item.getAttribute("href") === currentUrl) {
-          // Add the nav-active class to the matching menu item
-          item.classList.add("nav-active");
-      }
+  if (isHome) {
+    window.addEventListener("scroll", function () {
+      var currentScroll = window.pageYOffset;
+
+      sections.forEach(function (section) {
+        if (section.offsetTop <= currentScroll + 100 && section.offsetTop + section.offsetHeight > currentScroll + 100) {
+          var sectionId = section.getAttribute("id");
+          menuItems.forEach(function (item) {
+            if (item.getAttribute("href") === "#" + sectionId) {
+              item.classList.add("nav-active");
+            } else {
+              item.classList.remove("nav-active");
+            }
+          });
+        }
+      });
+    });
+  }
+
+  menuItems.forEach(function (item) {
+    if (isHome && item.getAttribute("href") === currentUrl) {
+      item.classList.add("nav-active");
+    }
   });
 });
-
-
-
-
-// window.addEventListener("DOMContentLoaded", function () {
-//   var navLinks = document.querySelectorAll(".menu a");
-
-//   function setActivePage() {
-//     var currentPageUrl = window.location.pathname;
-
-//     navLinks.forEach(function (link) {
-//       var linkHref = link.getAttribute("href");
-
-//       var normalizedCurrentPageUrl = currentPageUrl.endsWith("/") ? currentPageUrl : currentPageUrl + "/";
-//       var normalizedLinkHref = linkHref.endsWith("/") ? linkHref : linkHref + "/";
-
-//       if (normalizedCurrentPageUrl === normalizedLinkHref) {
-//         link.classList.add("nav-active");
-//       } else {
-//         link.classList.remove("nav-active");
-//       }
-//     });
-//   }
-
-//   setActivePage();
-
-//   if (window.location.pathname.endsWith("home.html")) {
-//     document.querySelector('.menu a[href="#main-section"]').classList.add("nav-active");
-//   }
-// });
 
 // Active Nav End
 
