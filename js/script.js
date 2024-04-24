@@ -52,32 +52,45 @@ window.addEventListener('load', function () {
 
 // ******************** Navbar Active link ********************
 
-window.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   var navLinks = document.querySelectorAll(".menu a");
+  var currentPageUrl = window.location.pathname;
 
-  function setActivePage() {
-    var currentPageUrl = window.location.pathname;
+  navLinks.forEach(function (link) {
+    var linkHref = link.getAttribute("href");
+    var isActive = currentPageUrl.endsWith(linkHref);
 
-    navLinks.forEach(function (link) {
-      var linkHref = link.getAttribute("href");
-
-      var normalizedCurrentPageUrl = currentPageUrl.endsWith("/") ? currentPageUrl : currentPageUrl + "/";
-      var normalizedLinkHref = linkHref.endsWith("/") ? linkHref : linkHref + "/";
-
-      if (normalizedCurrentPageUrl === normalizedLinkHref) {
-        link.classList.add("nav-active");
-      } else {
-        link.classList.remove("nav-active");
-      }
-    });
-  }
-
-  setActivePage();
-
-  if (window.location.pathname.endsWith("home.html")) {
-    document.querySelector('.menu a[href="#main-section"]').classList.add("nav-active");
-  }
+    link.classList.toggle("nav-active", isActive);
+  });
 });
+
+
+// window.addEventListener("DOMContentLoaded", function () {
+//   var navLinks = document.querySelectorAll(".menu a");
+
+//   function setActivePage() {
+//     var currentPageUrl = window.location.pathname;
+
+//     navLinks.forEach(function (link) {
+//       var linkHref = link.getAttribute("href");
+
+//       var normalizedCurrentPageUrl = currentPageUrl.endsWith("/") ? currentPageUrl : currentPageUrl + "/";
+//       var normalizedLinkHref = linkHref.endsWith("/") ? linkHref : linkHref + "/";
+
+//       if (normalizedCurrentPageUrl === normalizedLinkHref) {
+//         link.classList.add("nav-active");
+//       } else {
+//         link.classList.remove("nav-active");
+//       }
+//     });
+//   }
+
+//   setActivePage();
+
+//   if (window.location.pathname.endsWith("home.html")) {
+//     document.querySelector('.menu a[href="#main-section"]').classList.add("nav-active");
+//   }
+// });
 
 // Active Nav End
 
