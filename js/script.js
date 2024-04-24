@@ -225,7 +225,7 @@ function sendEmail() {
   var message = document.getElementById("message").value;
 
   if (name === '' || email === '' || phoneNumber === '' || message === '') {
-    swal("Error!", "Please fill in all the fields.", "error");
+    swal("Error!", "Kindly ensure all the fields are completed.", "error");
     return;
   }
 
