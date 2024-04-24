@@ -52,114 +52,32 @@ window.addEventListener('load', function () {
 
 // ******************** Navbar Active link ********************
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Get all the sections
-  var sections = document.querySelectorAll("section");
-
-  // Get all the navigation links
+window.addEventListener("DOMContentLoaded", function () {
   var navLinks = document.querySelectorAll(".menu a");
 
-  // Function to check which section is currently visible
-  function checkNav() {
-      var scrollPosition = window.scrollY;
+  function setActivePage() {
+    var currentPageUrl = window.location.pathname;
 
-      sections.forEach(function(current, index) {
-          var topOffset = current.offsetTop;
-          var sectionHeight = current.offsetHeight;
+    navLinks.forEach(function (link) {
+      var linkHref = link.getAttribute("href");
 
-          if (scrollPosition >= topOffset && scrollPosition < topOffset + sectionHeight) {
-              // Remove nav-active class from all links
-              navLinks.forEach(function(link) {
-                  link.classList.remove("nav-active");
-              });
+      var normalizedCurrentPageUrl = currentPageUrl.endsWith("/") ? currentPageUrl : currentPageUrl + "/";
+      var normalizedLinkHref = linkHref.endsWith("/") ? linkHref : linkHref + "/";
 
-              // Add nav-active class to the corresponding link
-              var correspondingNavLink = document.querySelector('a[href="#' + current.id + '"]');
-              if (correspondingNavLink) {
-                  correspondingNavLink.classList.add("nav-active");
-              }
-          }
-      });
+      if (normalizedCurrentPageUrl === normalizedLinkHref) {
+        link.classList.add("nav-active");
+      } else {
+        link.classList.remove("nav-active");
+      }
+    });
   }
 
-  // Check navigation on scroll
-  window.addEventListener("scroll", checkNav);
+  setActivePage();
+
+  if (window.location.pathname.endsWith("home.html")) {
+    document.querySelector('.menu a[href="#main-section"]').classList.add("nav-active");
+  }
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-  checkNav();
-});
-
-
-
-// function activateNavLinks() {
-//   let navLinks = document.querySelectorAll('nav ul a');
-//   let sections = document.querySelectorAll('section');
-
-//   window.addEventListener('scroll', () => {
-//     let scrollPosition = window.scrollY;
-
-//     sections.forEach(section => {
-//       let sectionId = section.getAttribute('id');
-//       let offsetTop = section.offsetTop - 150;
-//       let offsetBottom = offsetTop + section.offsetHeight;
-
-//       if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-//         setActive(navLinks, sectionId);
-//       }
-//     });
-//   });
-// }
-
-// function setActive(navLinks, sectionId) {
-//   navLinks.forEach(link => {
-//     if (link.getAttribute('href') === `#${sectionId}`) {
-//       link.classList.add('nav-active');
-//     }
-//     else {
-//       link.classList.remove('nav-active');
-//     }
-//   });
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   var currentPage = window.location.pathname;
-
-//   var navLinks = document.querySelectorAll('nav ul a');
-
-//   navLinks.forEach(function (link) {
-//     if (link.getAttribute('href') === currentPage) {
-//       link.classList.add('nav-active');
-//     } else {
-//       link.classList.remove('nav-active');
-//     }
-//   });
-
-//   if (window.location.pathname === "/html/home.html") {
-//     activateNavLinks();
-//   }
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   var currentPage = window.location.pathname;
-//   var navLinks = document.querySelectorAll('nav ul a');
-
-//   navLinks.forEach(function (link) {
-//     if (link.getAttribute('href') === currentPage) {
-//       link.classList.add('nav-active');
-//     } else {
-//       link.classList.remove('nav-active');
-//     }
-//   });
-
-//   if (window.location.pathname === "/html/home.html") {
-//     activateNavLinks();
-
-//     var homeLink = document.querySelector('nav ul a[href="#main-section"]');
-//     homeLink.classList.add('nav-active');
-//   }
-// });
 
 // Active Nav End
 
