@@ -52,17 +52,23 @@ window.addEventListener('load', function () {
 
 // ******************** Navbar Active link ********************
 
-document.addEventListener("DOMContentLoaded", function () {
-  var navLinks = document.querySelectorAll(".menu a");
-  var currentPageUrl = window.location.pathname;
+document.addEventListener("DOMContentLoaded", function() {
+  var currentUrl = window.location.href;
 
-  navLinks.forEach(function (link) {
-    var linkHref = link.getAttribute("href");
-    var isActive = currentPageUrl.endsWith(linkHref);
+  // Get all menu items
+  var menuItems = document.querySelectorAll(".menu li a");
 
-    link.classList.toggle("nav-active", isActive);
+  // Loop through each menu item
+  menuItems.forEach(function(item) {
+      // Check if the href attribute matches the current URL
+      if (item.getAttribute("href") === currentUrl) {
+          // Add the nav-active class to the matching menu item
+          item.classList.add("nav-active");
+      }
   });
 });
+
+
 
 
 // window.addEventListener("DOMContentLoaded", function () {
