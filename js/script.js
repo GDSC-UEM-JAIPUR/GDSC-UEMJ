@@ -98,8 +98,6 @@ $(function () {
       $(".menu").addClass("active");
       $(this).find("a").html("<i class='fa-solid fa-xmark'></i>");
 
-
-
     }
   })
 })
