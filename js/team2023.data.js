@@ -204,6 +204,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/Piyushchamp",
     socialLinkedinLink: "https://www.linkedin.com/in/piyush-sharma-aa4846249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     socialTwitterLink: "https://x.com/piyushsharma200?t=GibOw_4rFLL-gPhE1QG1ow&s=09",
+    socialInstaLink:"#",
+
   },
   {
     id: 1,
@@ -217,7 +219,8 @@ let exCoreMemberDetails2023 = [
 
     socialGithubLink: "https://github.com/Sushantchamp",
     socialLinkedinLink: "https://www.linkedin.com/in/sushant-roy-b51454249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    socialTwitterLink: "https://instagram.com/sushant_roy.03?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
+    socialTwitterLink:"#",
+    socialInstaLink: "https://instagram.com/sushant_roy.03?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
   },
   {
     id: 2,
@@ -233,6 +236,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/Suryachamp",
     socialLinkedinLink: "https://www.linkedin.com/in/surya-sekhar-prajapati-632708262",
     socialTwitterLink: "https://x.com/SPrajapati57189?t=al_DeRssQg0Ds-O3AXxD7g&s=09",
+    socialInstaLink:"#",
+
   },
   {
     id: 3,
@@ -248,6 +253,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/Somuchamp",
     socialLinkedinLink: "https://www.linkedin.com/in/soumyadeep-das-2a0419252/",
     socialTwitterLink: "https://twitter.com/Soumyad02320455",
+    socialInstaLink:"#",
+
   },
   {
     id: 4,
@@ -263,6 +270,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/SurajitM0nd0l",
     socialLinkedinLink: "https://www.linkedin.com/in/surajit-mondal-078044253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     socialTwitterLink: "https://twitter.com/SurajitM0ndal?t=zprNC7y2aGRLQkqo9pL--Q&s=09",
+    socialInstaLink:"#",
+
   },
   {
     id: 5,
@@ -278,6 +287,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/mohitvenom",
     socialLinkedinLink: "https://www.linkedin.com/in/mohit-sharma-857578252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     socialTwitterLink: "#",
+    socialInstaLink:"#",
+
   },
   {
     id: 6,
@@ -293,6 +304,8 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "https://github.com/ShibagniBhattacharjee06",
     socialLinkedinLink: "https://www.linkedin.com/in/shibagni-bhattacharjee-07a944283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     socialTwitterLink: "https://x.com/Shibagni0623?t=ujbo6XnDtE5qmi7ML8hJeA&s=08",
+    socialInstaLink:"#",
+
   },
   {
     id: 7,
@@ -308,6 +321,7 @@ let exCoreMemberDetails2023 = [
     socialGithubLink: "#",
     socialLinkedinLink: "https://www.linkedin.com/in/deepikagupta2006",
     socialTwitterLink: "#",
+    socialInstaLink:"#",
   },
 ]
 
@@ -388,6 +402,7 @@ Object.values(exCoreMemberDetails2023).map((val) => {
                   ${val.socialGithubLink !== '#' ? `<a href="${val.socialGithubLink}" target="_blank"><i class="bx bxl-github"></i></a>` : ''}
                   ${val.socialLinkedinLink !== '#' ? `<a href="${val.socialLinkedinLink}" target="_blank"><i class="bx bxl-linkedin"></i></a>` : ''}
                   ${val.socialTwitterLink !== '#' ? `<a href="${val.socialTwitterLink}" target="_blank"><i class="bx bxl-twitter"></i></a>` : ''}
+                  ${val.socialInstaLink !== '#' ? `<a href="${val.socialInstaLink}" target="_blank"><i class="bx bxl-instagram"></i></a>` : ''}
               </div>
           </div>
       `;
