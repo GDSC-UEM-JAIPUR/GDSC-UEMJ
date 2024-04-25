@@ -217,7 +217,7 @@ let exCoreMemberDetails2023 = [
 
     socialGithubLink: "https://github.com/Sushantchamp",
     socialLinkedinLink: "https://www.linkedin.com/in/sushant-roy-b51454249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    socialTwitterLink: "#",
+    socialTwitterLink: "https://instagram.com/sushant_roy.03?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
   },
   {
     id: 2,
