@@ -21,6 +21,12 @@
 body {
   /* background: var(--darkwhite); */
   font-family: var(--mainfont);
+  max-height: 100vh;
+  background: url(../images/bg_shape.png) #f5f5f5 fixed center / cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* **************************** Root Variables **************************** */
