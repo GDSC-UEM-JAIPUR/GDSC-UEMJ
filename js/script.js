@@ -146,6 +146,74 @@ document.addEventListener("DOMContentLoaded", function () {
   observerAccomplishment.observe(accomplishmentSection);
 });
 
+// download app section animation
+document.addEventListener("DOMContentLoaded", function () {
+  var downloadAppSection = document.getElementById('download-app');
+  var downloadCard = document.querySelector('.download-card');
+
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    if (isInViewport(downloadAppSection) && !downloadCard.classList.contains('show')) {
+      downloadCard.style.opacity = 1;
+      downloadCard.style.animation = 'bounce 1.5s ease-out forwards';
+      downloadCard.classList.add('show');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+});
+
+const downloadbutton = document.querySelector(".download-button");
+const downloadloader = document.querySelector(".download_loader");
+
+downloadbutton.addEventListener("click", async () => {
+  const url = downloadbutton.getAttribute("href");
+  downloadbutton.innerHTML = '<i class="fa-solid fa-angles-down"></i> Downloading... ';
+  downloadloader.classList.add("active");
+
+  const startTime = new Date().getTime();
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Network response was not ok');
+
+    const blob = await response.blob();
+    const urlObject = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = urlObject;
+    a.download = "GDSC UEMJ";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    const endTime = new Date().getTime();
+    const downloadTime = endTime - startTime;
+
+    downloadloader.style.animationDuration = `${downloadTime}ms`;
+
+    setTimeout(() => {
+      document.querySelector(".download-primary-btn").classList.add("active");
+      downloadbutton.innerHTML = '<i class="fa-solid fa-circle-check"></i> Downloaded!!';
+      downloadloader.classList.remove("active");
+    }, downloadTime);
+
+  } catch (error) {
+    downloadbutton.innerHTML = 'Download Failed';
+    downloadloader.classList.remove("active");
+    console.error('Download failed:', error);
+  }
+});
+
 
 // ******************** Event Section ********************
 document.addEventListener('DOMContentLoaded', function () {
@@ -317,8 +385,6 @@ document.getElementById('subscription-form').addEventListener('submit', function
   }
 });
 // End Newsletter 
-
-
 
 
 

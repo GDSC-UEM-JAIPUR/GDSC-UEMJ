@@ -1,6 +1,289 @@
 /********** Home Page CSS **********/
 /*******************************/
 
+#download-app {
+    background: linear-gradient(135deg, #6affac, #d874ff);
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+#download-app::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    z-index: 1;
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.download-card {
+    background: #f5e1ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateY(30px);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.heading-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-with-icon .app-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.card-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-primary-btn {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 60px;
+    background: #0f0f0f;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.download-primary-btn.active{
+    background: #2749ee;
+}
+
+
+.download-primary-btn a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.download-primary-btn a i {
+    margin-right: 10px;
+}
+
+.download-primary-btn .download_loader.active {
+    position: absolute;
+    height: 14%;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    justify-content: flex-start;
+    border-radius: 0px 0px 3px 3px;
+    overflow: hidden;
+    animation: downloadloader 10s forwards;
+}
+
+@keyframes downloadloader {
+    0% {
+        background: #2749ee;
+        width: 0%;
+        border-radius: 0px 0px 0px 3px;
+
+    }
+    30% {
+        background: #2749ee;
+        width: 30%;
+        border-radius: 0px 0px 0px 3px;
+
+    }
+    50% {
+        background: #2749ee;
+        width: 50%;
+        border-radius: 0px 0px 0px 3px;
+
+    }
+    90% {
+        background: #2749ee;
+        width: 90%;
+        border-radius: 0px 0px 0px 3px;
+
+    }
+    100% {
+        background: #2749ee;
+        width: 100%;
+        border-radius: 0px 0px 3px 3px;
+
+    }
+}
+
+.google-drive-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-drive-button:hover {
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 8px #808080;
+}
+
+.google-drive-button .drive-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+    .card-content h2 {
+        font-size: 1.5em;
+    }
+
+    .card-content p {
+        font-size: 1em;
+    }
+
+    .download-button,
+    .google-drive-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .google-drive-button .drive-logo {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+}
+
+
+.scroll-to-section {
+    position: fixed;
+    background: #87ceeb;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 2rem;
+    left: 15px;
+    bottom: 25vh;
+    transition: all 0.5s;
+    display: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.scroll-to-section::after {
+    content: 'Download';
+    font-size: 0.8rem;
+    color: #000;
+    margin-top: 10px;
+    display: block;
+}
+
+.scroll-to-section i {
+    color: #4a4c70;
+    padding-top: 10px;
+}
+
+.scroll-to-section:hover {
+    background: #4a4c70;
+    width: auto;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    left: 0;
+}
+
+.scroll-to-section:hover i {
+    color: #87ceeb;
+}
+
+.scroll-to-section:hover::after {
+    content: "Download Our App";
+    font-size: 0.8rem;
+    color: #000;
+    display: block;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
 
 /* ********** Loader CSS ********** */
 .loader {
@@ -152,7 +435,8 @@ a:hover {
     transition: top 0.6s ease-in-out, opacity 0.8s ease-in-out;
 
 }
-.horizontal-bar{
+
+.horizontal-bar {
     width: 99vw;
 }
 
@@ -162,17 +446,16 @@ a:hover {
     border-left: 1px solid #808080;
     border-right: 1px solid #808080;
     padding: 0 8px;
+    transition: all 0.5s ease;
 }
 
-.top-bar .mailto{
+.top-bar .mailto {
     color: #000;
-}
-.top-bar .mailto:hover{
-    color: #393947;
+    transition: all 0.5s ease;
 }
 
 .top-bar span:hover {
-    color: #393947;
+    text-decoration: underline;
 }
 
 .top-bar ul {
@@ -333,19 +616,21 @@ nav a {
 }
 
 @media screen and (max-width: 508px) {
-    .facebook-share-hidden{
+    .facebook-share-hidden {
         display: none;
     }
 
 }
+
 @media screen and (max-width: 780px) {
-    .landing-left{
+    .landing-left {
         margin-top: 12vh;
     }
 
 }
+
 @media screen and (max-width: 450px) {
-    .hiddenmail{
+    .hiddenmail {
         display: none;
     }
 
@@ -1169,7 +1454,7 @@ footer {
 
 }
 
-.footer-contact a{
+.footer-contact a {
     color: #fff;
 }
 
@@ -1386,7 +1671,8 @@ footer hr {
     margin: 0;
     padding: 5px;
 }
-.dev_link{
+
+.dev_link {
     background: linear-gradient(90deg, #e288ff 0%, #a66dff 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
