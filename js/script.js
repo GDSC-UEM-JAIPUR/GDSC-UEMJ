@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var opportunitiesSection = document.getElementById("opportunities");
   var aboutSection = document.getElementById("about-container");
   var accomplishmentSection = document.getElementById("accomplishments");
+  var downloadSection = document.getElementById("download-app");
 
   var options = {
     root: null,
@@ -131,6 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, options);
+  var observerDownload = new IntersectionObserver(function (entries, observerDownload) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        downloadSection.classList.add("show");
+        observerDownload.unobserve(entry.target);
+      }
+    });
+  }, options);
 
   var observerAccomplishment = new IntersectionObserver(function (entries, observerAccomplishment) {
     entries.forEach(function (entry) {
@@ -144,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   observerAbout.observe(aboutSection);
   observerOpportunities.observe(opportunitiesSection);
   observerAccomplishment.observe(accomplishmentSection);
+  observerDownload.observe(downloadSection);
 });
 
 // download app section animation
@@ -191,7 +201,7 @@ downloadbutton.addEventListener("click", async () => {
     const urlObject = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = urlObject;
-    a.download = "GDSC UEMJ";
+    a.download = "GDSC_UEMJ AndroidApp";
     document.body.appendChild(a);
     a.click();
     a.remove();

@@ -12,6 +12,9 @@
     width: 92%;
     margin: 0 auto;
     border-radius: 15px;
+    opacity: 0.1;
+    transform: translateY(70px);
+    transition: opacity 1.2s ease-in-out, transform 0.5s ease-in-out;
 }
 
 
@@ -39,6 +42,11 @@
     100% {
         transform: translateX(100%);
     }
+}
+
+#download-app.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
